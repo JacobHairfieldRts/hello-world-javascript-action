@@ -1,0 +1,16 @@
+name: Merge to Main Logger
+
+on:
+  push:
+    branches:
+      - main  # This triggers the action when a commit is pushed to 'main'
+
+jobs:
+  log_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Merge Confirmation
+        run: echo "🎉 Well done! Merged into main."
